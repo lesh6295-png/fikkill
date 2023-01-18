@@ -1,0 +1,9 @@
+POST /srv/statistics/store/ref HTTP/2
+Host: ficbook.net
+Content-Type: application/json
+User-Agent: chrome
+Accept: */*
+Accept-Encoding: gzip, deflate
+Content-Length: 66
+
+{"part_id":125,"fic_id": %s,"referer": "%s"}
