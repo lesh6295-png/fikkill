@@ -13,7 +13,7 @@ def queueRequests(target, wordlists):
     GLOBAL_REPARE = 10
 0
 
-    words = open('D:\\words.txt').readlines()
+    words = open('words.txt').readlines()
     
     #for i in range(3, 8):
     #    engine.queue(target.req, randstr(i), learn=1)
