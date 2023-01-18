@@ -8,7 +8,7 @@ def queueRequests(target, wordlists):
                            )
                            
     START_FNF = 1
-    END_FNF = 12934760+1
+    END_FNF = 1+1
     REPARE = 10
     GLOBAL_REPARE = 100
 
@@ -22,8 +22,8 @@ def queueRequests(target, wordlists):
         for j in range(1,REPARE):
             for i in range(START_FNF,END_FNF):
                 #engine.queue(target.req, [str(i).rstrip(), random.choice(words).rstrip()])
-                engine.queue(target.req, [str(random.randint(START_FNF,END_FNF)).rstrip(), random.choice(words).rstrip()])
-                #engine.queue(target.req, ['12889441'.rstrip(), 'кто такой костя?'.rstrip()])
+                #engine.queue(target.req, [str(random.randint(START_FNF,END_FNF)).rstrip(), random.choice(words).rstrip()])
+                engine.queue(target.req, ['12889441'.rstrip(), 'я стал знаменитым!'.rstrip()])
 
     
     """for q in range(1,100):
