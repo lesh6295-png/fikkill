@@ -10,8 +10,7 @@ def queueRequests(target, wordlists):
     START_FNF = 1
     END_FNF = 12934760+1
     REPARE = 10
-    GLOBAL_REPARE = 10
-0
+    GLOBAL_REPARE = 100
 
     words = open('D:\\words.txt').readlines()
     
