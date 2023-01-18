@@ -1,4 +1,4 @@
-POST /srv/statistics/store/ref HTTP/2
+POST /srv/statistics/store/ref HTTP/1.1
 Host: ficbook.net
 Content-Type: application/json
 User-Agent: chrome
