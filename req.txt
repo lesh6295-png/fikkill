@@ -7,4 +7,4 @@ Postman-Token: 3f53457b-883d-46fb-93d1-93bc4a791445
 Accept-Encoding: gzip, deflate
 Content-Length: 66
 
-{"part_id":125,"fic_id": %s,"referer": "%s"}
+{"fic_id": %s,"referer": "%s"}
