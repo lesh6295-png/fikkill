@@ -18,7 +18,7 @@ def queueRequests(target, wordlists):
     #    engine.queue(target.req, randstr(i), learn=1)
     #    engine.queue(target.req, target.baseInput, learn=2)
     
-    for q in range(1,len(words)/10):
+    for q in range(1,len(words)/5):
         for j in range(1,REPARE):
             for i in range(START_FNF,END_FNF):
                 #engine.queue(target.req, [str(i).rstrip(), random.choice(words).rstrip()])
