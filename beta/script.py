@@ -6,10 +6,10 @@ def queueRequests(target, wordlists):
                            requestsPerConnection=1000,
                            pipeline=False
                            )
-    comments = open('D:\\fickill\\beta\\comments.txt').readlines()
-    end = open('D:\\fickill\\beta\\end.txt').readlines()
-    start = open('D:\\fickill\\beta\\start.txt').readlines()
-    errors = open('D:\\fickill\\beta\\errors.txt').readlines()
+    comments = open('comments.txt').readlines()
+    end = open('end.txt').readlines()
+    start = open('start.txt').readlines()
+    errors = open('errors.txt').readlines()
 
     for word in range(1,50):
         err = random.choice(errors)
@@ -20,4 +20,5 @@ def queueRequests(target, wordlists):
 def handleResponse(req, interesting):
     # currently available attributes are req.status, req.wordcount, req.length and req.response
     if req.status != 404:
-        table.add(req)
+        table.add(req)
+
