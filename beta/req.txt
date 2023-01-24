@@ -1,4 +1,4 @@
-POST /ajax/public_beta HTTP/2
+POST /ajax/public_beta HTTP/1.1
 Host: ficbook.net
 Authority: ficbook.net
 Accept: */*
