@@ -11,9 +11,9 @@ def queueRequests(target, wordlists):
     start = open('beta\\start.txt').readlines()
     errors = open('beta\\errors.txt').readlines()
 
-    for word in range(1,50):
+    while 1:
         err = random.choice(errors)
-        engine.queue(target.req, [err.rstrip(),random.choice(start),err,random.choice(end), random.choice(comments), 33609713])
+        engine.queue(target.req, [err.rstrip(),random.choice(start),err,random.choice(end), random.choice(comments), random.randint(0,35000000)])
         #engine.queue(target.req, [words[word].rstrip(),random.choice(words),random.choice(words),random.choice(words)])
 
 
