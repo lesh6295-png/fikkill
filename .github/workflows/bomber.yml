@@ -4,7 +4,7 @@ name: Bomber
 
 on:
   workflow_dispatch:
-    
+  push:
 
 jobs:
 
@@ -22,4 +22,4 @@ jobs:
         fetch-depth: 0
 
     - name: Bomb
-      run: java -jar turbo-intruder-all.jar script.py req.txt https://ficbook.net:443 foo
+      run: java -jar turbo-intruder-all.jar beta/script.py beta/req.txt https://ficbook.net:443 foo
