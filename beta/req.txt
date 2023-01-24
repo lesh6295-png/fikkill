@@ -1,0 +1,23 @@
+POST /ajax/public_beta HTTP/2
+Host: ficbook.net
+Authority: ficbook.net
+Accept: */*
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Cookie: __cf_bm=6KesTHDDSKLbEZjuXKN_NDq2fCcg0ALuqx8RB6SZlrs-1674494676-0-AfiTpUnnWxydcoxbf/VV2vrrTiVSNsEKh60NrqOyj5XMgtPbnosqMpMUaFxxkqTghxLIIMHlgUNdTbFgj3Zqr00=; path=/; expires=Mon, 23-Jan-23 17:54:36 GMT; domain=.ficbook.net; HttpOnly; Secure; SameSite=None
+Origin: https://ficbook.net
+Pragma: no-cache
+Referer: https://vk.com
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Windows"
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+X-Requested-With: XMLHttpRequest
+User-Agent: PostmanRuntime/7.30.0
+Postman-Token: de64c35c-e91b-40eb-9558-858ab8e1b12d
+Accept-Encoding: gzip, deflate
+Content-Length: 845
+
+selected_text=%3Cspan%3E%s%3C%2Fspan%3E&context=%s%3Cspan+class%3D%22grammar_error%22%3E%s%3C%2Fspan%3E%s&comment=%s&fanfic_id=13079188&part_id=%s&type=1
