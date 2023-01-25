@@ -27,6 +27,6 @@ jobs:
         sudo apt update
         sudo apt install cloudflare-warp
         warp-cli --accept-tos register
-        warp-cli connect
+        warp-cli --accept-tos connect
     - name: Bomb
       run: java -jar turbo-intruder-all.jar beta/script_l.py beta/req.txt https://ficbook.net:433 foo
