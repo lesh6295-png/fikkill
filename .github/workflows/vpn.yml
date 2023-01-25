@@ -35,4 +35,4 @@ jobs:
         --env PROTONVPN_SERVER=NL \
         ghcr.io/tprasadtp/protonvpn:latest
     - name: Bomb
-      run: java -jar turbo-intruder-all.jar beta/script.py beta/req.txt https://ficbook.net:433 foo
+      run: java -jar turbo-intruder-all.jar beta/script_l.py beta/req.txt https://ficbook.net:433 foo
