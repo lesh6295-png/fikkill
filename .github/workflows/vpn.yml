@@ -23,7 +23,7 @@ jobs:
     - name: Enable Vpn
       run: |
         wget https://protonvpn.com/download/protonvpn-stable-release_1.0.1-1_all.deb
-        sudo dpkg -i protonvpn-stable-release_1.0.1-1_all.deb
+        sudo dpkg -i protonvpn-stable-release_1.0.1-1_all.deb --allow-unauthenticated
         sudo apt update --allow-unauthenticated
         sudo apt install protonvpn-cli --allow-unauthenticated
         protonvpn-cli login ${{ secrets.VL }}
