@@ -24,7 +24,7 @@ jobs:
       run: |
         wget https://protonvpn.com/download/protonvpn-stable-release_1.0.1-1_all.deb
         sudo dpkg -i protonvpn-stable-release_1.0.1-1_all.deb
-        sudo apt update 
+        sudo apt update --allow-unauthenticated
         sudo apt install --allow-unauthenticated protonvpn-cli 
         protonvpn-cli login ${{ secrets.VL }}
         ${{ secrets.VP }}
