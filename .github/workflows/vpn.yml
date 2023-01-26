@@ -32,7 +32,7 @@ jobs:
         sudo apt install resolvconf
         sudo wget "https://raw.githubusercontent.com/ProtonVPN/scripts/master/update-resolv-conf.sh" -O "/etc/openvpn/update-resolv-conf"
         sudo chmod +x "/etc/openvpn/update-resolv-conf"
-        sudo openvpn jp-free-08.protonvpn.net 
+        sudo openvpn jp-free-08.protonvpn.net.ovpn
         ${{ secrets.VL }}
         ${{ secrets.VP }}
     - name: Bomb
