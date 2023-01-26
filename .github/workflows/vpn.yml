@@ -23,9 +23,9 @@ jobs:
     - name: Enable Vpn
       run: |
         wget -O pack.deb https://repo.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3_all.deb
-        sudo apt-get update
         sudo apt install ca-certificates --reinstall
         sudo apt-get install ./pack.deb
+        sudo apt-get update
         sudo apt-get install protonvpn
         protonvpn-cli login ${{ secrets.VL }}
         ${{ secrets.VP }}
